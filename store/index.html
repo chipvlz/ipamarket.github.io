@@ -250,7 +250,7 @@ onerror = console.error = console.warn = function (e) {
 			<transition-group name="fade-app" tag="div" class="row">
 <!-- $root = vue root -->
 				<div class="col-12 mt-3 h6 text-bold" :key="'title'">
-					<img src="svgs/hot.svg" /> Top Download
+					<img src="svgs/hot.svg" /> New
 				</div>
 				<div class="col-3 col-sm-4 col-lg-2 col-xl-1 mb-3 text-center" v-for="(app, key) in appsHot" :key="equalKey(key)" @click="$root.goto(key, app)">
 					<img class="img-fluid icon-sm w-min-3 h-min-3" :src="app.icon" style="border-radius: 10px"/>
