@@ -78,7 +78,7 @@
 					You may be interested in
 				</div>
 				<div class="col-3 col-sm-4 col-lg-2 col-xl-1 mb-3 text-center" v-for="(app, key) in inforApp.hotTrens" :key="equalKey(key)" @click="$root.goto(key, app)">
-					<img class="img-fluid icon-sm" :src="app.icon" style="border-radius: 15px"/>
+					<img class="img-fluid icon-sm" :src="app.icon" style="border-radius: 10px"/>
 					<div class="limit-line-1 small-80 text-bold mt-1">
 						{{ app.name }}
 					</div>
