@@ -932,7 +932,7 @@ Vue.set(this.search, "result", obj)
 		},
 		goto: function(package, data){
 			if (history.pushState)
-				stateHistory.push(my.$clone(this.$data)), history.pushState(this.$data, null, "information/index.html?package=" + package);
+				stateHistory.push(my.$clone(this.$data)), history.pushState(this.$data, null, "index.html?package=" + package);
 				//history.replaceState({a: 100}, "Information", "?package=" + package);
 
 			this.switchT("inforApp")
