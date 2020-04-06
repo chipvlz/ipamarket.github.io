@@ -182,11 +182,11 @@ onerror = console.error = console.warn = function (e) {
 		
 		<!-- toolbar -->
 		
-		<section class="container fixed-bottom bg-light py-1 toolbar" v-if="tabSelect != 'inforApp'">
+		<section class="container fixed-bottom bg-light py-1 toolbar" v-if="tabSelect != 'inforApp'" style="border-radius:1em 1em 0 0">
 			<div class="row">
 				<div class="col-3 text-center line-height-0" @click="switchT('hot')">
 						<img :src="'svgs/home' + (tabSelect == 'hot' ? '-selected.svg' : '.svg')" /><br>
-						<small class="text-secondary">Hot</small>
+						<small class="text-secondary">Home</small>
 				</div>
 				<div class="col-3 text-center line-height-0" @click="switchT('game')" @click.once="load('game')">
 						<img :src="'svgs/game' + (tabSelect == 'game' ? '-selected.svg' : '.svg')" /><br>
@@ -250,7 +250,7 @@ onerror = console.error = console.warn = function (e) {
 			<transition-group name="fade-app" tag="div" class="row">
 <!-- $root = vue root -->
 				<div class="col-12 mt-3 h6 text-bold" :key="'title'">
-					<img src="svgs/hot.svg" /> Hot
+					<img src="svgs/hot.svg" /> Top Download
 				</div>
 				<div class="col-3 col-sm-4 col-lg-2 col-xl-1 mb-3 text-center" v-for="(app, key) in appsHot" :key="equalKey(key)" @click="$root.goto(key, app)">
 					<img class="img-fluid icon-sm w-min-3 h-min-3" :src="app.icon" style="border-radius: 10px"/>
@@ -266,7 +266,7 @@ onerror = console.error = console.warn = function (e) {
 			
 			<!-- button load -->
 			<div class="my-3 row text-primary text-center">
-				<div class="col-12" v-if="isLoaded" @click="$emit('more')">
+				<div class="col-12" v-if="isLoaded" @click="$emit('more')" style="cursor:pointer">
 					<div>Thêm</div>
 					<img src="svgs/more.svg" class="loading" />
 				</div>
