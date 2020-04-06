@@ -258,8 +258,8 @@
 	:height=120
 	:width="240"
 	v-if="swipers.length">
-	<slide v-for="(slide, i) in swipers" :index="i" :key="slide + i" style="border-radius:20px" >
-	  <img :src="slide"/>
+	<slide v-for="(slide, i) in swipers" :index="i" :key="slide + i">
+	  <img :src="slide"  style="border-radius:15px"/>
 	</slide>
 </carousel-3d>
 				</transition>
@@ -358,7 +358,7 @@ body {
 	}
 	
 .carousel-3d-slide {
-	border-radius: ;
+	border-radius: 15px;
 }
 
 .toolbar img {
@@ -616,7 +616,7 @@ small {
 	}
 	
 .carousel-3d-slide {
-	border-radius: ;
+	border-radius: 15px;
 }
 
 .toolbar img {
