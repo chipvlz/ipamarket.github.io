@@ -5,7 +5,6 @@
 		<meta charset="utf-8">
 		<script src="../js/polyfill-0.1.42.min.js"></script>
 		<script src="../js/mystore.js"></script>
-		<script src="../js/store.min.js"></script>
 		<script src="../js/libmy.js"></script>
 		<script src="../js/vue.min.js"></script>
 		<link rel="stylesheet" href="../css/store.min.css"></link>
@@ -932,7 +931,7 @@ Vue.set(this.search, "result", obj)
 		},
 		goto: function(package, data){
 			if (history.pushState)
-				stateHistory.push(my.$clone(this.$data)), history.pushState(this.$data, null, "index.html?package=" + package);
+				stateHistory.push(my.$clone(this.$data)), history.pushState(this.$data, null, "index.html?package=" + "package");
 				//history.replaceState({a: 100}, "Information", "?package=" + package);
 
 			this.switchT("inforApp")
