@@ -42,7 +42,7 @@
 </script>
 	</head>
 	<body>
-	<div id="app" class="container">
+	<div id="app">
 		<!-- tab hot -->
 		<page-spa :swipers="hot.swipers"
 			:apps-hot=hot.appHot
@@ -258,7 +258,7 @@
 	:height=120
 	:width="240"
 	v-if="swipers.length">
-	<slide v-for="(slide, i) in swipers" :index="i" :key="slide + i">
+	<slide v-for="(slide, i) in swipers" :index="i" :key="slide + i" style="border-radius:20px" >
 	  <img :src="slide"/>
 	</slide>
 </carousel-3d>
@@ -358,7 +358,7 @@ body {
 	}
 	
 .carousel-3d-slide {
-	border-radius: 15px;
+	border-radius: ;
 }
 
 .toolbar img {
@@ -616,7 +616,7 @@ small {
 	}
 	
 .carousel-3d-slide {
-	border-radius: 15px;
+	border-radius: ;
 }
 
 .toolbar img {
