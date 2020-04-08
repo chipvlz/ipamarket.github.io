@@ -11,6 +11,7 @@
 		<link rel=stylesheet href="css/intro.min.css">
 		<link rel=stylesheet href="css/bootstrap.min.css">
 		<script src="js/polyfill-0.1.42.min.js"></script>
+		<script src="js/sweet-alert-2.js"></script>
 <style>
 @media (min-width: 576px){
   .bg-sm-light {
@@ -25,6 +26,14 @@
   }
 }
 </style>
+<script>
+	Swal.fire({
+			 	    title: "Chú Ý!",
+			 	    icon: "info",
+			 	    text: "Vui lòng xem mục Hướng Dẫn nếu lần đầu dùng iOS Support",
+				    confirmButtonText: "OK",
+			 	})
+</script>
 	</head>
 	<body>
 
@@ -134,7 +143,7 @@
 							<p>3. Truy cập ứng dụng sau khi quá trình tải hoàn tất, nếu có thông báo yêu cầu nhập ID Apple hiện lên thì hãy nhấn nút <b>Get ID</b> ngay bên dưới để lấy tài khoản điền vào nhé!. </p>
 							<p><i>*Nếu bị văng khi vào ứng dụng thì hãy lấy tài khoản bên dưới đăng nhập vào iTunes&AppStore <u>(KHÔNG PHẢI iCLOUD)</u> và vào AppStore tải 1 app bất kỳ trong mục đã mua thì sẽ không bị văng ứng dụng nữa. <U>TUYỆT ĐỐI KHÔNG ĐĂNG NHẬP TÀI KHOẢN CỦA WEB VÀO iCLOUD.</U></i></p>
 							<p>P/s: Chúng tôi cung cấp dịch vụ hoàn toàn miễn phí và sẽ luôn như vậy nên các bạn hãy kiên nhẫn mà bỏ qua "quảng cáo" nhé! Chân thành cảm ơn!. </p>
-							<button class="btn btn-blue float-right wow animated flipInX idapple" data-wow-delay="0.2s" style="color:#000">Get ID</button>
+							<button class="btn btn-blue float-right wow animated flipInX idapple" data-wow-delay="0.2s" style="color:#000" onclick="alert('Vui lòng chuyển bàn phím sang tiếng anh trước khi nhập tài khoản!')">Get ID</button>
 						</div>
 					</div>
 				</div>
