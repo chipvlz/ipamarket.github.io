@@ -142,7 +142,7 @@ onerror = console.error = console.warn = function (e) {
 				</div>
 				<div class="col-12 mt-3">
 					<div class="scroll">
-						<img class="img-fluid screenshoot ml-3 border" :scr="url" v-img="{ group: 'screenshoot', src: url }" v-for="url in inforApp.app.screenshoot" :key="inforApp.app.icon + url"/>
+						<img class="img-fluid screenshoot ml-3 border" :src="url" v-img="{ group: 'screenshoot', src: url }" v-for="url in inforApp.app.screenshoot" :key="inforApp.app.icon + url"/>
 					</div>
 				</div>
 			</div>
@@ -164,7 +164,7 @@ onerror = console.error = console.warn = function (e) {
 					You may be interested in
 				</div>
 				<div class="col-3 col-sm-4 col-lg-2 col-xl-1 mb-3 text-center" v-for="(app, key) in inforApp.hotTrens" :key="equalKey(key)" @click="$root.goto(key, app)">
-					<img class="img-fluid icon-sm" :scr="app.icon" style="border-radius: 10px"/>
+					<img class="img-fluid icon-sm" :src="app.icon" style="border-radius: 10px"/>
 					<div class="limit-line-1 small-80 text-bold mt-1">
 						{{ app.name }}
 					</div>
@@ -251,7 +251,7 @@ onerror = console.error = console.warn = function (e) {
 	:background="'#00000000'"
 	v-if="swipers.length">
 	<slide v-for="(slide, i) in swipers" :index="i" :key="slide + i">
-	  <img :scr=slide style="border-radius: 15px" width="100%" height="100%" class="py-1" />
+	  <img :src=slide style="border-radius: 15px" width="100%" height="100%" class="py-1" />
 	</slide>
 </carousel-3d>
 				</transition>
@@ -262,7 +262,7 @@ onerror = console.error = console.warn = function (e) {
 					<img src="svgs/hot.svg" /> Top Download
 				</div>
 				<div class="col-3 col-sm-3 col-lg-2 col-xl-1 mb-3 text-center" v-for="(app, key) in appsHot" :key="equalKey(key)" @click="$root.goto(key, app)">
-					<img class="img-fluid icon-sm w-min-3 h-min-3" :scr="app.icon" style="border-radius: 10px"/>
+					<img class="img-fluid icon-sm w-min-3 h-min-3" :src="app.icon" style="border-radius: 10px"/>
 					<div class="limit-line-1 small-80 text-bold mt-1">
 						{{ app.name }}
 					</div>
