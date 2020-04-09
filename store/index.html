@@ -191,7 +191,7 @@ onerror = console.error = console.warn = function (e) {
 		
 		<!-- toolbar -->
 		
-		<section class="container fixed-bottom bg-light py-1 toolbar" v-if="tabSelect != 'inforApp'">
+		<section class="container fixed-bottom bg-light py-1 toolbar" v-if="tabSelect != 'inforApp'" style="border-radius:1em 1em 0 0">
 			<div class="row">
 				<div class="col-3 text-center line-height-0" @click="switchT('hot')">
 						<img :src="'svgs/home' + (tabSelect == 'hot' ? '-selected.svg' : '.svg')" /><br>
@@ -275,16 +275,16 @@ onerror = console.error = console.warn = function (e) {
 			
 			<!-- button load -->
 			<div class="my-3 row text-primary text-center">
-				<div class="col-12" v-if="isLoaded === true" @click="$emit('more')">
+				<div class="col-12" v-if="isLoaded === true" @click="$emit('more')" style="cursor:pointer">
 					<div>Thêm</div>
 					<img src="svgs/more.svg" class="loading" />
 				</div>
 				<div class="col-12" v-else-if="isLoaded === false">
 					<div>Đang tải..</div>
-					<img src="svgs/loading.svg" width="16px" height="16px"/>
+					<img src="svgs/loading.svg" width="25px" height="25px"/>
 				</div>
 				<div class="col-12" v-else>
-					<div>End</div>
+					<div>Đang cập nhật</div>
 				</div>
 			</div>
 		</section>
