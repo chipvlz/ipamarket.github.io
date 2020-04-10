@@ -11,6 +11,8 @@
 		<link rel=stylesheet href="css/intro.min.css">
 		<link rel=stylesheet href="css/bootstrap.min.css">
 		<script src="js/polyfill-0.1.42.min.js"></script>
+		<script src="js/sweetalert2.min.js"></script>
+		<link rel=stylesheet href="css/sweetalert2.min.css">
 <style>
 @media (min-width: 576px){
   .bg-sm-light {
@@ -27,11 +29,10 @@
 </style>
 	</head>
 	<body>
-
 	<div id="app" class="wow fadeIn animated" hidden>
 		<section>
 			<nav class="navbar navbar-expand-sm navbar-sm fixed-top navbar-dark wow bounceInDown animated mx-lg-5 mx-xl-5 bg-dark" data-wow-delay="0.1s" style="border-radius:0px 0px 10px 10px">
-				<a class="navbar-brand"><img style="width:40px;height:40px;cursor:pointer" src="logo.png" onclick="alert('By Me A Drink?\n\nMomo:\n0969582643\nMB Bank:\n2750108920005')"/></a>
+				<a class="navbar-brand"><img style="width:40px;height:40px;cursor:pointer" src="logo.png" onclick="donate()"/></a>
 
 				<button class="navbar-toggler" data-toggle="collapse" data-target="#navbar">
 					<span class="navbar-toggler-icon"></span>
@@ -92,19 +93,19 @@
 				</div>
 				<div class="col-12 row m-0 p-0 text-center">
 					<div class="feature col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 wow fadeInLeft" data-wow-delay="0.2s">
-						<img onclick="alert('Hỗ trợ iOS thấp nhất có thể. Hãy để ý mục Compatibility của ứng dụng để biết thêm chi tiết')" src="svgs/oldapp.svg" style="border-radius:50%;background-color:#00cfff;cursor:pointer"/>
+						<img onclick="oldapp()" src="svgs/oldapp.svg" style="border-radius:50%;background-color:#00cfff;cursor:pointer"/>
 						<h4>Old Applications</h4>
 						<p>iOS Support cung cấp các ứng dụng phiên bản thấp nhất có thể cho hầu hết iDevices</p>
 					</div>
 					
 					<div class="feature col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 wow fadeInRight" data-wow-delay="0.2s">
-						<img onclick="alert('Ứng dụng trả phí sẽ có từ (Paid) ngay sau tên ứng dụng')" src="svgs/paidapp.svg" style="border-radius: 50%;background-color:#00cfff;cursor:pointer"/>
+						<img onclick="paidapp()" src="svgs/paidapp.svg" style="border-radius: 50%;background-color:#00cfff;cursor:pointer"/>
 						<h4>Paid Applications</h4>
 						<p>Hỗ trợ người dùng tải xuống các ứng dụng trả phí từ apple 1 cách hoàn toàn <U>MIỄN PHÍ</U></p>
 					</div>
 					
 					<div class="feature col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 wow fadeInLeft" data-wow-delay="0.2s">
-						<img onclick="alert('Sẽ có vài ứng dụng yêu cầu phải JailBreak máy và cài Appsyn. Các ứng dụng này sẽ được đánh dấu bằng từ (Appsync) ngay sau tên ứng dụng')" src="svgs/otherapp.svg" style="border-radius: 50%;background-color:#00cfff;cursor:pointer"/>
+						<img onclick="otherapp()" src="svgs/otherapp.svg" style="border-radius: 50%;background-color:#00cfff;cursor:pointer"/>
 						<h4>Deleted/3rd Applications</h4>
 						<p>Cung cấp cho người dùng một số ứng dụng đã bị xoá hoặc không tồn tại trên Appstore.</p>
 					</div>
@@ -134,7 +135,7 @@
 							<p>3. Truy cập ứng dụng sau khi quá trình tải hoàn tất, nếu có thông báo yêu cầu nhập ID Apple hiện lên thì hãy nhấn nút <b>Get ID</b> ngay bên dưới để lấy tài khoản điền vào nhé!. </p>
 							<p><i>*Nếu bị văng khi vào ứng dụng thì hãy lấy tài khoản bên dưới đăng nhập vào iTunes&AppStore <u>(KHÔNG PHẢI iCLOUD)</u> và vào AppStore tải 1 app bất kỳ trong mục đã mua thì sẽ không bị văng ứng dụng nữa. <U>TUYỆT ĐỐI KHÔNG ĐĂNG NHẬP TÀI KHOẢN CỦA WEB VÀO iCLOUD.</U></i></p>
 							<p>P/s: Chúng tôi cung cấp dịch vụ hoàn toàn miễn phí và sẽ luôn như vậy nên các bạn hãy kiên nhẫn mà bỏ qua "quảng cáo" nhé! Chân thành cảm ơn!. </p>
-							<button class="btn btn-blue float-right wow animated flipInX idapple" data-wow-delay="0.2s" style="color:#000" onclick="alert('Vui lòng chuyển bàn phím sang tiếng anh trước khi nhập tài khoản!')">Get ID</button>
+							<button class="btn btn-blue float-right wow animated flipInX" data-wow-delay="0.2s" style="color:#000" onclick="getid()">Get ID</button>
 						</div>
 					</div>
 				</div>
@@ -159,7 +160,54 @@
 		</div>'
 	document.write(html)
 }(void 0)
-alert("Vui lòng đọc kỹ mục Hướng Dẫn nếu lần đầu sử dụng iOS Support\nCảm ơn!")
+swal({
+	title: 'Vui lòng đọc kỹ mục Hướng Dẫn nếu lần đầu sử dụng iOS Support\nCảm ơn!',
+    imageUrl: 'logo.png',
+    imageWidth: 100,
+  	imageHeight: 100,
+    confirmButtonText: '',
+ })
+function donate(){
+	swal({
+	title: 'By Me A Drink?',
+	html: '<b>Momo:</b> 0969580643<br><b>MB Bank:</b> 2750108920005',
+    type: 'question',
+    confirmButtonText: "",
+ })
+}
+function oldapp(){
+	swal({
+	title: 'Ứng Dụng Phiên Bản Cũ',
+	text: 'Hỗ trợ iOS thấp nhất có thể. Hãy để ý mục Compatibility của ứng dụng để biết thêm chi tiết',
+    type: 'info',
+    confirmButtonText: '',
+ })
+}
+function paidapp(){
+	swal({
+	title: 'Ứng Dụng Trả Phí',
+	text: 'Các ứng dụng trả phí sẽ được đánh dấu bằng từ (Paid) ngay sau tên ứng dụng',
+    type: 'info',
+    confirmButtonText: '',
+ })
+}
+function otherapp(){
+	swal({
+	title: 'Ứng Dụng Phiên Bản Cũ',
+	text: 'Sẽ có vài ứng dụng yêu cầu phải JailBreak máy và cài Appsyn. Các ứng dụng này sẽ được đánh dấu bằng từ (Appsync) ngay sau tên ứng dụng',
+    type: 'info',
+    confirmButtonText: '',
+ })
+}
+function getid(){
+	swal({
+	title: 'Vui lòng chuyển bàn phím sang ngôn ngữ Tiếng Anh trước khi nhập ID',
+    type: 'warning',
+    confirmButtonText: '',
+ }).then(function() {
+    window.location = "https://iossp.github.io/tk.html";
+})
+}
 </script>
 
     					</div>
