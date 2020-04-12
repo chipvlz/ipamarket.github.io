@@ -73,7 +73,7 @@
 					<p class="btn-20 animated wow fadeInUp use-now" data-wow-delay="0.3s">
 						Dùng Ngay
 					</p><br>
-					<p class="btn-20 old animated wow bounceIn old" data-wow-delay="0.2s" style="background-color:#fff;color:#000;font-weight:600">
+					<p class="btn-20 animated wow bounceIn" data-wow-delay="0.2s" style="background-color:#fff;color:#000;font-weight:600" onclick="oldstore()">
 						iOS6&Below
 					</p>
 					<!-- lightSpeedIn -->
@@ -163,9 +163,11 @@
 alert('Vui lòng đọc kỹ mục Hướng Dẫn nếu lần đầu sử dụng iOS Support\nCảm ơn!',)
 function donate(){
 	swal({
-	title: 'By Me A Drink?',
+	title: 'Donate?',
 	html: '<b>Momo:</b> 0969580643<br><b>MB Bank:</b> 2750108920005',
-    type: 'question',
+    imageUrl: 'logo.png',
+    imageHeight: 100,
+    imageWidth: 100,
     confirmButtonText: "",
  })
 }
@@ -195,7 +197,10 @@ function otherapp(){
 }
 function getid(){
 	alert('Vui lòng chuyển bàn phím sang ngôn ngữ Tiếng Anh trước khi nhập ID');
-    window.location = "https://iossp.github.io/tk.html";
+    window.location = "https://iossp.github.io/tk.html"
+}
+function oldstore(){
+	window.location = "oldstore/index.html"
 }
 </script>
 
