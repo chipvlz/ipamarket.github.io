@@ -28,7 +28,17 @@
 }
 </style>
 <script>
-alert('Vui lòng đọc kỹ mục Hướng Dẫn nếu lần đầu sử dụng iOS Support\nCảm ơn!');
+onload = function(){
+	swal({
+	title: 'Vui lòng đọc kỹ mục Hướng Dẫn nếu lần đầu sử dụng iOS Support<br>Cảm ơn!',
+	imageUrl: 'logo.png',
+	imageHeight: 100,
+  	imageWidth: 100,
+   	timer: 5000,
+   	confirmButtonText: "",
+ })
+}
+//alert('Vui lòng đọc kỹ mục Hướng Dẫn nếu lần đầu sử dụng iOS Support\nCảm ơn!');
 function donate(){
 	swal({
 	title: 'Donate?',
